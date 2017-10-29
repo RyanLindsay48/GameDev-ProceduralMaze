@@ -39,6 +39,6 @@ public class MazeDoor : MazePassage {
 	
 	public override void OnPlayerExited () {
 		OtherSideOfDoor.hinge.localRotation = hinge.localRotation = Quaternion.identity;
-		OtherSideOfDoor.cell.room.Hide();
+		//OtherSideOfDoor.cell.room.Hide();
 	}
 }
