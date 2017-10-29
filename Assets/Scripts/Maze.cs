@@ -3,27 +3,19 @@ using System.Collections;
 using System.Collections.Generic;
 
 public class Maze : MonoBehaviour {
-
 	public IntVector2 size;
-
 	public MazeCell cellPrefab;
-
 	public float generationStepDelay;
-
-	public MazePassage passagePrefab;
-
-	public MazeDoor doorPrefab;
-
 	[Range(0f, 1f)]
 	public float doorProbability;
-
+	public MazePassage passagePrefab;
+	public MazeDoor doorPrefab;
 	public MazeWall[] wallPrefabs;
-
 	public MazeRoomSettings[] roomSettings;
-
 	private MazeCell[,] cells;
-
 	private List<MazeRoom> rooms = new List<MazeRoom>();
+
+
 
 	public IntVector2 RandomCoordinates {
 		get {

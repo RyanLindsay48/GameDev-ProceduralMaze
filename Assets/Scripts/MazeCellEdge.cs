@@ -1,10 +1,11 @@
 ﻿using UnityEngine;
 
 public abstract class MazeCellEdge : MonoBehaviour {
-
-	public MazeCell cell, otherCell;
-
+	public MazeCell cell;
+	public MazeCell otherCell;
 	public MazeDirection direction;
+
+
 
 	public virtual void Initialize (MazeCell cell, MazeCell otherCell, MazeDirection direction) {
 		this.cell = cell;

@@ -1,10 +1,10 @@
 ﻿using UnityEngine;
 
 public class Player : MonoBehaviour {
-
 	private MazeCell currentCell;
-
 	private MazeDirection currentDirection;
+
+
 
 	public void SetLocation (MazeCell cell) {
 		if (currentCell != null) {

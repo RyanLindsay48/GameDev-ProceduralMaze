@@ -2,14 +2,12 @@
 using System.Collections;
 
 public class GameManager : MonoBehaviour {
-
 	public Maze mazePrefab;
-
 	public Player playerPrefab;
-
 	private Maze mazeInstance;
-
 	private Player playerInstance;
+
+
 
 	private void Start () {
 		StartCoroutine(BeginGame());
