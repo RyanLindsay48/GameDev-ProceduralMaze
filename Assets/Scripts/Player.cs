@@ -10,7 +10,6 @@ public enum Direction {
 public class Player : MonoBehaviour {
 	public float movementSpeed;
 	public float rotationSpeed;
-	private MazeCell currentCell;
 	private GameObject player;
 	private GameObject playerCamera;
 	private Vector3 currentDirection;
@@ -20,13 +19,6 @@ public class Player : MonoBehaviour {
 	public void SetLocation (MazeCell cell) {
 		player = GameObject.FindGameObjectWithTag("Player");
 		playerCamera = GameObject.FindGameObjectWithTag("PlayerCamera");
-
-		if (currentCell != null) {
-			currentCell.OnPlayerExited();
-		}
-		currentCell = cell;
-		transform.localPosition = cell.transform.localPosition;
-		currentCell.OnPlayerEntered();
 
 		player.transform.position = cell.transform.position;
 	}
